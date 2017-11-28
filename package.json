@@ -1,0 +1,43 @@
+{
+  "name": "tslint-rules",
+  "private": true,
+  "version": "1.0.0",
+  "description": "TSLint rule configuration for Node and Angular projects",
+  "main": "tslint-base.json",
+  "keywords": [
+    "codelyzer",
+    "tslint"
+  ],
+  "repository": "git@github.com:nwronski/tslint-rules.git",
+  "bugs": {
+    "url": "https://github.com/nwronski/tslint-rules/issues"
+  },
+  "author": "Nick Wronski <nwronski@gmail.com> (https://github.com/nwronski)",
+  "license": "MIT",
+  "standard-version": {
+    "scripts": {
+      "posttag": "git push --follow-tags origin master"
+    }
+  },
+  "scripts": {
+    "commitmsg": "commitlint -e",
+    "prerelease": "git checkout master; git pull origin master",
+    "release": "standard-version --commit-all --message 'chore(release): release v%s'",
+    "postrelease": "conventional-github-releaser -p angular"
+  },
+  "peerDependencies": {
+    "tslint": "^5.8.0",
+    "typescript": ">=2.3"
+  },
+  "dependencies": {
+    "tslint-eslint-rules": "^4.1.1",
+    "vrsource-tslint-rules": "^5.8.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^5.1.1",
+    "@commitlint/config-conventional": "^5.1.3",
+    "conventional-github-releaser": "^2.0.0",
+    "husky": "^0.14.3",
+    "standard-version": "^4.2.0"
+  }
+}
