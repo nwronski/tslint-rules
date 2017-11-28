@@ -26,7 +26,7 @@ npm i --save-dev tslint-rules
 Create a `tslint.json` file in the root folder of your project and add
 the following:
 
-``` json
+```json
 {
   "rulesDirectory": [
     "node_modules/tslint-eslint-rules/dist/rules",
@@ -53,7 +53,7 @@ npm i --save-dev tslint-rules
 Create a `tslint.json` file in the root folder of your project and add
 the following:
 
-``` json
+```json
 {
   "rulesDirectory": [
     "node_modules/codelyzer",
@@ -69,7 +69,7 @@ the following:
 Add a script to the `scripts` section of your `package.json`, making sure to
 set the correct pattern for your source files (the example uses `src/**/*.ts`):
 
-``` json
+```json
 {
   "scripts": {
     "lint": "tslint --type-check --fix --project tsconfig.json --config tslint.json src/**/*.ts"
@@ -92,7 +92,7 @@ The TSLint configuration in this module pair well with the following
 `compilerOptions` added to your `tsconfig.json` as an extra layer of
 best practice enforcement:
 
-``` json
+```json
 {
   "compilerOptions": {
     "strict": true,
