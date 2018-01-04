@@ -26,6 +26,7 @@
     "postrelease": "conventional-github-releaser -p angular"
   },
   "peerDependencies": {
+    "codelyzer": ">=4",
     "tslint": "^5.8.0",
     "typescript": ">=2.3"
   },
