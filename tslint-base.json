@@ -96,7 +96,7 @@
       }
     ],
     "no-any": false,
-    "no-bitwise": true,
+    "no-bitwise": false,
     "no-constant-condition": true,
     "no-duplicate-case": true,
     "no-duplicate-imports": true,
@@ -127,7 +127,7 @@
     "no-string-literal": true,
     "no-submodule-imports": false,
     "no-switch-case-fall-through": true,
-    "no-unbound-method": [true, "ignore-static"],
+    "no-unbound-method": false,
     "no-unexpected-multiline": true,
     "no-unnecessary-initializer": true,
     "no-unused-variable": [
