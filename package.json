@@ -1,7 +1,7 @@
 {
   "name": "tslint-rules",
   "private": true,
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "TSLint rule configuration for Node and Angular projects",
   "main": "tslint-base.json",
   "keywords": [
