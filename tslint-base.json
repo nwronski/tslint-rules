@@ -14,7 +14,19 @@
       "always"
     ],
     "arrow-return-shorthand": true,
-    "await-promise": true,
+    "await-promise": [
+      true,
+      "Bluebird",
+      "QueryBuilder",
+      "QueryBuilderSingle",
+      "QueryBuilderOption",
+      "QueryBuilderBase",
+      "QueryBuilderPage",
+      "QueryBuilderUpdate",
+      "QueryBuilderDelete",
+      "QueryBuilderInsert",
+      "QueryBuilderInsertSingle"
+    ],
     "ban": [
       true,
       [
