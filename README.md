@@ -1,4 +1,4 @@
-# tslint-rules
+# nwronski-tslint-rules
 
 This repo contains the TSLint rule configuration for my projects that
 use TypeScript as well as Angular 2 TypeScript projects.
@@ -17,10 +17,10 @@ Install TSLint and TypeScript for your project.
 npm i --save-dev typescript tslint
 ```
 
-Install the tslint-rules module.
+Install the nwronski-tslint-rules module.
 
 ```
-npm i --save-dev tslint-rules
+npm i --save-dev nwronski-tslint-rules
 ```
 
 Create a `tslint.json` file in the root folder of your project and add
@@ -32,7 +32,7 @@ the following:
     "node_modules/tslint-eslint-rules/dist/rules",
     "node_modules/vrsource-tslint-rules/rules"
   ],
-  "extends": "tslint-rules/tslint-base"
+  "extends": "nwronski-tslint-rules/tslint-base"
 }
 ```
 
@@ -60,7 +60,7 @@ the following:
     "node_modules/tslint-eslint-rules/dist/rules",
     "node_modules/vrsource-tslint-rules/rules"
   ],
-  "extends": "tslint-rules/tslint-ng2"
+  "extends": "nwronski-tslint-rules/tslint-ng2"
 }
 ```
 
