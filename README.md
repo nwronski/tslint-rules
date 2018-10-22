@@ -14,13 +14,13 @@ project type.
 Install TSLint and TypeScript for your project.
 
 ```
-npm i --save-dev typescript tslint
+npm i -D typescript tslint
 ```
 
-Install the nwronski-tslint-rules module.
+Install the `nwronski-tslint-rules` module.
 
 ```
-npm i --save-dev nwronski-tslint-rules
+npm i -D nwronski-tslint-rules
 ```
 
 Create a `tslint.json` file in the root folder of your project and add
@@ -29,8 +29,7 @@ the following:
 ```json
 {
   "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules",
-    "node_modules/vrsource-tslint-rules/rules"
+    "node_modules/tslint-eslint-rules/dist/rules"
   ],
   "extends": "nwronski-tslint-rules/tslint-base"
 }
@@ -41,13 +40,13 @@ the following:
 Install TSLint, Codelyzer and TypeScript for your project.
 
 ```
-npm i --save-dev typescript tslint codelyzer
+npm i -D typescript tslint codelyzer
 ```
 
-Install the tslint-rules module.
+Install the `nwronski-tslint-rules` module.
 
 ```
-npm i --save-dev tslint-rules
+npm i -D nwronski-tslint-rules
 ```
 
 Create a `tslint.json` file in the root folder of your project and add
@@ -57,8 +56,7 @@ the following:
 {
   "rulesDirectory": [
     "node_modules/codelyzer",
-    "node_modules/tslint-eslint-rules/dist/rules",
-    "node_modules/vrsource-tslint-rules/rules"
+    "node_modules/tslint-eslint-rules/dist/rules"
   ],
   "extends": "nwronski-tslint-rules/tslint-ng2"
 }
@@ -72,7 +70,7 @@ set the correct pattern for your source files (the example uses `src/**/*.ts`):
 ```json
 {
   "scripts": {
-    "lint": "tslint --type-check --fix --project tsconfig.json --config tslint.json src/**/*.ts"
+    "lint": "tslint --fix --format codeFrame --project ./tsconfig.json 'src/**/*.ts'"
   }
 }
 ```

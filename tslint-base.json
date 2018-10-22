@@ -13,6 +13,10 @@
       true,
       "always"
     ],
+    "array-type": [
+      true,
+      "array-simple"
+    ],
     "arrow-return-shorthand": true,
     "await-promise": [
       true,
@@ -29,22 +33,15 @@
     ],
     "ban": [
       true,
-      [
-        "window",
-        {
-          "name": "isNaN",
-          "message": "You can use Number.isNan() instead of isNaN()"
-        },
-        [
-          "describe",
-          "only"
-        ],
-        [
-          "it",
-          "only"
-        ]
-      ]
+      "window",
+      "eval",
+      {
+        "name": "isNaN",
+        "message": "You can use Number.isNaN() instead of isNaN()"
+      },
+      [ "*", "only" ]
     ],
+    "ban-comma-operator": true,
     "binary-expression-operand-order": true,
     "block-spacing": [
       true,
@@ -55,26 +52,17 @@
       "check-uppercase",
       "check-space",
       {
-        "ignore-words": [ "TODO" ]
+        "ignore-words": [ "TODO", "@todo" ]
       }
     ],
+    "curly": true,
     "cyclomatic-complexity": [
       true,
       15
     ],
-    "dot-notation": true,
-    "ext-variable-name": [
+    "file-name-casing": [
       true,
-      ["class",                       "pascal"],
-      ["interface",                   "pascal"],
-      ["parameter",   "camel",        "allow-leading-underscore"],
-      ["property",    "public",       "camel"],
-      ["property",    "private",      "camel",    "require-leading-underscore"],
-      ["property",    "protected",    "camel",    "allow-leading-underscore"],
-      ["function",                    "camel",    "allow-leading-underscore"],
-      ["method",      "public",       "camel"],
-      ["method",      "private",      "camel",    "require-leading-underscore"],
-      ["method",      "protected",    "camel",    "allow-leading-underscore"]
+      "kebab-case"
     ],
     "handle-callback-err": [
       true,
@@ -85,10 +73,25 @@
       "rxjs",
       "lodash"
     ],
-    "indent": [
+    "indent": false,
+    "ter-indent": [
       true,
-      "spaces",
-      2
+      2,
+      {
+        "SwitchCase": 1,
+        "MemberExpression": 1,
+        "FunctionDeclaration": {
+          "parameters": 1,
+          "body": 1
+        },
+        "FunctionExpression": {
+          "parameters": 1,
+          "body": 1
+        },
+        "CallExpression": {
+          "arguments": 1
+        }
+      }
     ],
     "interface-over-type-literal": true,
     "max-classes-per-file": false,
@@ -107,12 +110,17 @@
         "order": "instance-sandwich"
       }
     ],
+    "no-angle-bracket-type-assertion": true,
     "no-any": false,
     "no-bitwise": false,
     "no-constant-condition": true,
-    "no-duplicate-case": true,
     "no-duplicate-imports": true,
-    "no-duplicate-variable": [true, "check-parameters"],
+    "no-duplicate-variable": [
+      true,
+      "check-parameters"
+    ],
+    "no-duplicate-switch-case": true,
+    "no-empty": true,
     "no-empty-character-class": true,
     "no-empty-interface": false,
     "no-ex-assign": true,
@@ -120,7 +128,15 @@
     "no-extra-semi": true,
     "no-floating-promises": false,
     "no-for-in-array": true,
-    "no-inferrable-types": false,
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
+    "no-inferrable-types": [
+      true,
+      "ignore-params",
+      "ignore-properties"
+    ],
     "no-inner-declarations": true,
     "no-internal-module": true,
     "no-invalid-regexp": true,
@@ -139,15 +155,13 @@
     "no-string-literal": true,
     "no-submodule-imports": false,
     "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": [
+      true,
+      "ignore-template-strings"
+    ],
     "no-unbound-method": false,
     "no-unexpected-multiline": true,
     "no-unnecessary-initializer": true,
-    "no-unused-variable": [
-      true,
-      {
-        "ignore-pattern": "^_"
-      }
-    ],
     "no-void-expression": [
       true,
       "ignore-arrow-function-shorthand"
@@ -157,6 +171,7 @@
       true,
       "always"
     ],
+    "object-literal-shorthand": true,
     "object-literal-sort-keys": false,
     "one-line": [
       true,
@@ -165,6 +180,10 @@
       "check-else",
       "check-open-brace",
       "check-whitespace"
+    ],
+    "one-variable-per-declaration": [
+      true,
+      "ignore-for-loop"
     ],
     "ordered-imports": [
       true,
@@ -177,14 +196,9 @@
       true,
       "allow-public"
     ],
-    "prefer-literal": [
-      true,
-      "object",
-      "function",
-      "array"
-    ],
     "prefer-method-signature": true,
     "prefer-object-spread": true,
+    "prefer-readonly": true,
     "promise-function-async": true,
     "quotemark": [
       true,
@@ -193,24 +207,31 @@
       "avoid-template"
     ],
     "restrict-plus-operands": true,
+    "return-undefined": true,
+    "space-within-parens": [
+      true,
+      0
+    ],
     "strict-boolean-expressions": [
       true,
       "allow-boolean-or-undefined"
     ],
     "strict-type-predicates": false,
-    "ter-func-call-spacing": [
+    "space-before-function-paren": [
       true,
-      "never"
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always",
+        "constructor": "never",
+        "method": "never"
+      }
     ],
     "trailing-comma": [
       true,
       {
-        "multiline": {
-          "objects": "always",
-          "arrays": "always",
-          "functions": "ignore",
-          "typeLiterals": "ignore"
-        },
+        "esSpecCompliant": false,
+        "multiline": "always",
         "singleline": "never"
       }
     ],
@@ -228,7 +249,10 @@
       "check-operator",
       "check-module",
       "check-separator",
+      "check-rest-spread",
       "check-type",
+      "check-typecast",
+      "check-type-operator",
       "check-preblock"
     ]
   }

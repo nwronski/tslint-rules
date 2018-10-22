@@ -25,13 +25,14 @@
     "postrelease": "conventional-github-releaser -p angular"
   },
   "peerDependencies": {
-    "codelyzer": ">=4",
-    "tslint": "^5.8.0",
+    "tslint": "^5.11.0",
     "typescript": ">=2.3"
   },
+  "optionalDependencies": {
+    "codelyzer": ">=4.5.0"
+  },
   "dependencies": {
-    "tslint-eslint-rules": "^4.1.1",
-    "vrsource-tslint-rules": "^5.8.0"
+    "tslint-eslint-rules": "^5.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^5.1.1",
