@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/nwronski/tslint-rules/compare/v2.0.1...v3.0.0) (2018-10-22)
+
+
+### Features
+
+* upgrade and add rules for latest codelyzer and tslint ([#1](https://github.com/nwronski/tslint-rules/issues/1)) ([753fca6](https://github.com/nwronski/tslint-rules/commit/753fca6))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/nwronski/tslint-rules/compare/v2.0.0...v2.0.1) (2018-01-04)
 
