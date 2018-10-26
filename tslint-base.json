@@ -198,7 +198,6 @@
     ],
     "prefer-method-signature": true,
     "prefer-object-spread": true,
-    "prefer-readonly": true,
     "promise-function-async": true,
     "quotemark": [
       true,
