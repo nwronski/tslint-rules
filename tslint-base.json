@@ -79,7 +79,6 @@
       2,
       {
         "SwitchCase": 1,
-        "MemberExpression": 1,
         "FunctionDeclaration": {
           "parameters": 1,
           "body": 1
