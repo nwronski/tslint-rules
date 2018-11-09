@@ -70,7 +70,6 @@
     ],
     "import-blacklist": [
       true,
-      "rxjs",
       "lodash"
     ],
     "indent": false,
