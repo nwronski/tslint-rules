@@ -148,7 +148,11 @@
       true,
       "allow-declarations"
     ],
-    "no-object-literal-type-assertion": true,
+    "no-object-literal-type-assertion": [
+      true,
+      { "allow-arguments": true }
+    ],
+    "no-redundant-jsdoc": true,
     "no-sparse-arrays": true,
     "no-string-literal": true,
     "no-submodule-imports": false,
@@ -237,7 +241,8 @@
       "ban-keywords",
       "check-format",
       "allow-leading-underscore",
-      "allow-pascal-case"
+      "allow-pascal-case",
+      "require-const-for-all-caps"
     ],
     "whitespace": [
       true,
