@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [3.1.0](https://github.com/nwronski/tslint-rules/compare/v3.0.4...v3.1.0) (2019-07-12)
+
+
+### Features
+
+* **angular:** upgrade to codelyzer 5.1 ([6baf279](https://github.com/nwronski/tslint-rules/commit/6baf279))
+
+
 
 <a name="3.0.4"></a>
 ## [3.0.4](https://github.com/nwronski/tslint-rules/compare/v3.0.3...v3.0.4) (2018-11-09)
