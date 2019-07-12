@@ -30,7 +30,7 @@
   },
   "peerDependencies": {
     "tslint": "^5.18.0",
-    "typescript": ">=3.5.3"
+    "typescript": "<3.5"
   },
   "optionalDependencies": {
     "codelyzer": ">=5.1.0"

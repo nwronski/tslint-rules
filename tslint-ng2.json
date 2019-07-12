@@ -34,7 +34,7 @@
     "prefer-inline-decorator": false,
     "relative-url-prefix": true,
     "template-accessibility-alt-text": true,
-    "template-accessibility-elements-content": true,
+    "template-accessibility-elements-content": false,
     "template-accessibility-label-for": true,
     "template-accessibility-tabindex-no-positive": true,
     "template-accessibility-table-scope": true,
