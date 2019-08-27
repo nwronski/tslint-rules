@@ -1,26 +1,21 @@
 # nwronski-tslint-rules
 
-This repo contains the TSLint rule configuration for my projects that
-use TypeScript as well as Angular 2 TypeScript projects.
+This repo contains my TSLint rule configurations for projects that use
+TypeScript and/or Angular.
 
 ## Installation
 
-The instructions differ for plain TypeScript projects and for Angular 2 +
-TypeScript projects, so follow the instructions that apply to your
-project type.
+Use the [TypeScript Rules Installation](#typeScript-rules-installation) for
+plain Node + TypeScript projects or the
+[Angular Rules Installation](#angular-rules-installation) for
+Angular + TypeScript projects.
 
-### Basic Installation
+### TypeScript Rules Installation
 
-Install TSLint and TypeScript for your project.
+Install the `nwronski-tslint-rules` and `tslint` modules.
 
-```
-npm i -D typescript tslint
-```
-
-Install the `nwronski-tslint-rules` module.
-
-```
-npm i -D nwronski-tslint-rules
+```shell
+npm i -D nwronski-tslint-rules tslint
 ```
 
 Create a `tslint.json` file in the root folder of your project and add
@@ -28,25 +23,16 @@ the following:
 
 ```json
 {
-  "rulesDirectory": [
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ],
-  "extends": "nwronski-tslint-rules/tslint-base"
+  "extends": "nwronski-tslint-rules"
 }
 ```
 
-### Angular 2 Installation
+### Angular Rules Installation
 
-Install TSLint, Codelyzer and TypeScript for your project.
+Install the `nwronski-tslint-rules`, `tslint`, and `codelyzer` modules.
 
-```
-npm i -D typescript tslint codelyzer
-```
-
-Install the `nwronski-tslint-rules` module.
-
-```
-npm i -D nwronski-tslint-rules
+```shell
+npm i -D nwronski-tslint-rules tslint codelyzer
 ```
 
 Create a `tslint.json` file in the root folder of your project and add
@@ -54,13 +40,16 @@ the following:
 
 ```json
 {
-  "rulesDirectory": [
-    "node_modules/codelyzer",
-    "node_modules/tslint-eslint-rules/dist/rules"
-  ],
-  "extends": "nwronski-tslint-rules/tslint-ng2"
+  "extends": "nwronski-tslint-rules/tslint-ng2.json",
+  "rules": {
+    "directive-selector": [ true, "attribute", "nw", "camelCase" ],
+    "component-selector": [ true, "element", "nw", "kebab-case" ]
+  }
 }
 ```
+
+Don't forget to change `nw` to your preferred prefix for component and directive
+selectors.
 
 ## Usage
 
@@ -70,7 +59,7 @@ set the correct pattern for your source files (the example uses `src/**/*.ts`):
 ```json
 {
   "scripts": {
-    "lint": "tslint --fix --format codeFrame --project ./tsconfig.json 'src/**/*.ts'"
+    "lint": "tslint --fix --config ./tslint.json --project ./tsconfig.json 'src/**/*.ts'"
   }
 }
 ```
@@ -80,26 +69,6 @@ done before the project can be successfully built. For example, you could
 prepend the linting command to your build command to make sure the linting
 is run first.
 
-```
+```shell
 npm run lint
-```
-
-### Recommended TypeScript compiler options
-
-The TSLint configuration in this module pair well with the following
-`compilerOptions` added to your `tsconfig.json` as an extra layer of
-best practice enforcement:
-
-```json
-{
-  "compilerOptions": {
-    "strict": true,
-    "noUnusedLocals": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true
-  }
-}
 ```
