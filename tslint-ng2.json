@@ -1,14 +1,43 @@
 {
-  "extends": "./tslint-base.json",
+  "extends": [
+    "./tslint-base.json",
+    "codelyzer"
+  ],
   "rules": {
-    "component-selector": [ true, "element", "nw", "kebab-case" ],
-    "directive-selector": [ true, "attribute", "nw", "camelCase" ],
-
-    "angular-whitespace": [ true, "check-interpolation", "check-pipe", "check-semicolon" ],
-    "component-class-suffix": true,
-    "component-max-inline-declarations": [ { "template": 3, "styles": 0, "animations": 0 } ],
+    "component-selector": [
+      true,
+      "element",
+      "nw",
+      "kebab-case"
+    ],
+    "directive-selector": [
+      true,
+      "attribute",
+      "nw",
+      "camelCase"
+    ],
+    "angular-whitespace": [
+      true,
+      "check-interpolation",
+      "check-pipe",
+      "check-semicolon"
+    ],
+    "component-class-suffix": [
+      true,
+      "Component"
+    ],
+    "component-max-inline-declarations": [
+      {
+        "template": 3,
+        "styles": 0,
+        "animations": 0
+      }
+    ],
     "contextual-lifecycle": true,
-    "directive-class-suffix": true,
+    "directive-class-suffix": [
+      true,
+      "Directive"
+    ],
     "import-destructuring-spacing": true,
     "no-attribute-decorator": true,
     "no-host-metadata-property": true,
@@ -41,8 +70,14 @@
     "template-accessibility-valid-aria": true,
     "template-banana-in-box": true,
     "template-click-events-have-key-events": false,
-    "template-conditional-complexity": [ true, 3 ],
-    "template-cyclomatic-complexity": [ true, 8 ],
+    "template-conditional-complexity": [
+      true,
+      3
+    ],
+    "template-cyclomatic-complexity": [
+      true,
+      8
+    ],
     "template-mouse-events-have-key-events": false,
     "template-no-any": true,
     "template-no-autofocus": true,
@@ -53,4 +88,3 @@
     "use-pipe-transform-interface": true
   }
 }
-

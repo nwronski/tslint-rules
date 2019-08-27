@@ -1,5 +1,11 @@
 {
-  "extends": "tslint:latest",
+  "extends": [
+    "tslint:latest",
+    "tslint-eslint-rules"
+  ],
+  "linterOptions": {
+    "format": "codeFrame"
+  },
   "rules": {
     "align": [
       true,
@@ -20,6 +26,8 @@
     "arrow-return-shorthand": true,
     "await-promise": [
       true,
+      "UserClient",
+      "PromiseLike",
       "Bluebird",
       "QueryBuilder",
       "QueryBuilderSingle",
@@ -39,7 +47,10 @@
         "name": "isNaN",
         "message": "You can use Number.isNaN() instead of isNaN()"
       },
-      [ "*", "only" ]
+      [
+        "*",
+        "only"
+      ]
     ],
     "ban-comma-operator": true,
     "binary-expression-operand-order": true,
@@ -47,12 +58,16 @@
       true,
       "always"
     ],
+    "class-name": true,
     "comment-format": [
       true,
       "check-uppercase",
       "check-space",
       {
-        "ignore-words": [ "TODO", "@todo" ]
+        "ignore-words": [
+          "TODO",
+          "@todo"
+        ]
       }
     ],
     "curly": true,
@@ -70,9 +85,11 @@
     ],
     "import-blacklist": [
       true,
-      "lodash"
+      "lodash",
+      "rxjs/Rx"
     ],
     "indent": false,
+    "invalid-void": true,
     "ter-indent": [
       true,
       2,
@@ -125,10 +142,14 @@
     "no-extra-boolean-cast": true,
     "no-extra-semi": true,
     "no-floating-promises": false,
+    "no-for-in": true,
     "no-for-in-array": true,
     "no-implicit-dependencies": [
       true,
-      "dev"
+      "dev",
+      [
+        "@generated/photon"
+      ]
     ],
     "no-inferrable-types": [
       true,
@@ -150,7 +171,9 @@
     ],
     "no-object-literal-type-assertion": [
       true,
-      { "allow-arguments": true }
+      {
+        "allow-arguments": true
+      }
     ],
     "no-redundant-jsdoc": true,
     "no-sparse-arrays": true,
@@ -216,6 +239,12 @@
     "strict-boolean-expressions": [
       true,
       "allow-boolean-or-undefined"
+    ],
+    "strict-string-expressions": [
+      true,
+      {
+        "allow-empty-types": true
+      }
     ],
     "strict-type-predicates": false,
     "space-before-function-paren": [

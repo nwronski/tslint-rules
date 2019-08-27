@@ -2,7 +2,7 @@
   "name": "nwronski-tslint-rules",
   "version": "3.1.1",
   "description": "TSLint rule configuration for Node and Angular projects",
-  "main": "tslint-base.json",
+  "main": "./tslint-base.json",
   "keywords": [
     "codelyzer",
     "tslint"
@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/nwronski/tslint-rules/issues"
   },
-  "author": "Nick Wronski <nwronski@gmail.com> (https://github.com/nwronski)",
+  "author": "Nick Wronski <nick@nickwronski.com> (https://github.com/nwronski)",
   "license": "MIT",
   "standard-version": {
     "scripts": {
@@ -29,11 +29,9 @@
     "postrelease": "conventional-github-releaser -p angular"
   },
   "peerDependencies": {
-    "tslint": "^5.18.0",
+    "codelyzer": ">=5.1.0",
+    "tslint": ">=5.19.0",
     "typescript": "<3.5"
-  },
-  "optionalDependencies": {
-    "codelyzer": ">=5.1.0"
   },
   "dependencies": {
     "tslint-eslint-rules": "^5.4.0"
