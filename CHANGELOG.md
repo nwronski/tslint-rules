@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/nwronski/tslint-rules/compare/v3.1.1...v4.0.0) (2019-08-27)
+
+
+### Features
+
+* upgrade to tslint 5.19.0 ([a6d7dde](https://github.com/nwronski/tslint-rules/commit/a6d7dde))
+
+
+
 ### [3.1.1](https://github.com/nwronski/tslint-rules/compare/v3.1.0...v3.1.1) (2019-07-12)
 
 
