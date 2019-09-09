@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.3](https://github.com/nwronski/tslint-rules/compare/v4.0.2...v4.0.3) (2019-09-09)
+
+
+### Bug Fixes
+
+* accept any valid TypeScript version ([a9f950f](https://github.com/nwronski/tslint-rules/commit/a9f950f))
+
 ### [4.0.2](https://github.com/nwronski/tslint-rules/compare/v4.0.1...v4.0.2) (2019-08-27)
 
 ### [4.0.1](https://github.com/nwronski/tslint-rules/compare/v4.0.0...v4.0.1) (2019-08-27)
